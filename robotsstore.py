@@ -11,12 +11,11 @@ class Product(object):
         return self.price *self.count * self.tax 
   
 
-robot=Product(price=900,count=2,tax=1.25)
+products = [Product(price=900,count=2,tax=1.25),Product(price=100,count=1,tax=1.06)]
+total_price = products[0].price_with_tax() + products[1].price_with_tax()
 
-book=Product(price=100,count=1,tax=1.06)
 
-
-print robot.price_with_tax() + book.price_with_tax()
+print total_price
 
  	
 
